@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    background-image: url(img/tausta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    font-family: sans-serif;
+    line-height: 1.2;
+}
+.container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-10%);
+    -ms-transform: translate(-50%,-10%);
+    transform: translate(-50%,-10%);
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 20px;
+    min-height: 530px;
+}
+.otsikko {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Mate SC', serif;
+    font-size: 2.5rem;
+}
+@media only screen and (max-width: 600px) {
+    .otsikko {
+        font-size: 2rem;
+    }
+    .car-div {
+        width: 300px;
+        position: absolute;
+        bottom: 50px;
+        left: -144%;
+    } 
+  }
+form {
+    margin-top: 30px;
+}
+ input[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 18px;
+  }
+  form input {
+    margin-right: 0.5em;
+    margin-top: 15px;
+    width: 90px;
+}
+
+.vastaukset {
+    min-height: 120px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+#nopeus1-vastaus {
+    display: block;
+}
+#nopeus2-vastaus {
+    display: block;
+}
+#nopeus1-kulutus {
+    display: block;
+}
+#nopeus2-kulutus {
+    display: block;
+}
+#erotus-vastaus {
+    display: block;
+}
+#erotus-kulutus {
+    display: block;
+}
+#matkan-kesto {
+    margin-bottom: 5px;
+}
+#matkan-kulutus {
+    margin-bottom: 5px;
+}
+.erotukset {
+    float: right;
+    margin-top: 50px;
+}
+.car-div {
+    width: 500px;
+    position: absolute;
+    bottom: 50px;
+    left: -100%;
+}
+.anim {
+    animation-name: drive;
+    animation-duration: 10s;  
+}
+#car {
+    width: 100%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.wrap {
+    font-weight: bold;
+}
+.erotukset {
+    font-style: italic;
+}
+@keyframes drive {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 150%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .car-div {
+        width: 300px;
+        position: absolute;
+        bottom: 50px;
+        left: -144%;
+    } 
+    .anim {
+        animation-name: drive;
+        animation-duration: 5s;  
+    }
+    .vastaukset {
+        display: block;
+    }
+  }

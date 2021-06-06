@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fi" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Autoilumittari</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/mittari.png">
+    </head>
+    <body>
+
+        <div class="container">
+
+            <h1 class="otsikko">Autoilumittari</h1>
+            <p>Tällä laskurilla voit selvittää mökkimatkasi polttoaineen kulutuksen ja matkan keston ajaessasi eri nopeuksilla.</p>
+            <form id="form">
+                <label for="autot">Valitse auto:</label>
+                <select id="autot" name="autolista">
+                <option value="Auto A">A 3l/100km</option>
+                <option value="Auto B">B 3.5l/100km</option>
+                <option value="Auto C">C 4l/100km</option>
+                </select><br>
+                <label for="matka">Matka:</label>
+                <input type="text" id="matka" name="matka" placeholder="km" required><br>
+                <label for="nopeus1">Nopeus 1:</label>
+                <input type="number" id="nopeus1" name="nopeus1" min="1" max="300" placeholder="km/h" required>
+                <label for="nopeus2">Nopeus 2:</label>
+                <input type="number" id="nopeus2" name="nopeus2" min="1" max="300" placeholder="km/h" required><br>
+                <input id="submit-btn" type="submit" value="Laske"><br>
+              </form>
+
+              <div class="vastaukset">
+                  <div class="wrap">
+                  <div class="nopeudet">
+                      <h2 id="matkan-kesto"></h2>
+                  <span id="nopeus1-vastaus"></span>
+                  <span id="nopeus2-vastaus"></span>
+                  
+                </div>
+                   <br>
+                   <div class="kulutukset">
+                    <h2 id="matkan-kulutus"></h2>
+                  <span id="nopeus1-kulutus"></span>
+                  <span id="nopeus2-kulutus"></span>
+                  
+                </div>
+            </div>
+                <div class="erotukset">
+                    <span id="erotus-vastaus"></span>
+                    <span id="erotus-kulutus"></span>
+                </div>
+              </div>
+            
+        </div>
+        
+        <div id="car-div" class="car-div">
+        <img id="car" src="img/auto.png" alt="Girl in a jacket">
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
